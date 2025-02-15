@@ -1,0 +1,12 @@
+import "./App.css";
+
+function App() {
+  return (
+    <>
+      <h1>Hello World</h1>
+      <p>Nice to meet you</p>
+    </>
+  );
+}
+
+export default App;
