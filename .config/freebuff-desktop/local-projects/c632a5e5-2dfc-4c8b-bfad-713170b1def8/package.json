@@ -1,0 +1,36 @@
+{
+  "name": "deservia",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Deservia — lifestyle-based landlord and tenant matching (Challenge 9 demo)",
+  "scripts": {
+    "predev": "vite build",
+    "dev": "concurrently -k -n api,web -c magenta,cyan \"wrangler dev --port 8787\" \"vite\"",
+    "dev:api": "wrangler dev --port 8787",
+    "dev:web": "vite",
+    "typecheck": "tsc -p tsconfig.app.json && tsc -p tsconfig.worker.json",
+    "embed:application": "node scripts/embed-application-pdf.mjs",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --port 5173"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0",
+    "hono": "^4.13.19",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.6"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261121.1",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "concurrently": "^10.0.7",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "wrangler": "^4.166.0"
+  }
+}

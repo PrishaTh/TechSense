@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "deservia",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-21",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "deservia-db",
+      "database_id": "9f1c7b3e-4a2d-4f68-9c55-1b7e2d3a4c60"
+    }
+  ]
+}
